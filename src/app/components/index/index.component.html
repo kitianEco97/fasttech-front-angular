@@ -1,0 +1,30 @@
+<app-header class="mb-5"></app-header>
+<h3 class="text-center mt-5">Productos de Fasttech</h3>
+<div class="container mt-5 text-center">
+  <div *ngIf="loading" class="mx-auto text-center mt-5">
+    <img src="../../../../assets/gif/load.gif" alt="gif de carga" width="200">
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let file of files">
+      <div class="card mb-5" style="width: 18rem;">
+        <img src="../../../assets/img/logo.png" width="10" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{file.name}}</h5>
+          <p class="card-text">{{file.description}}.</p>
+          <a href="#" class="btn btn-primary">Detalles</a>
+        </div>
+      </div>       
+    </div>
+  </div>      
+    <!--<div class="jumbotron">
+        <h1 *ngIf="!nombreUsuario" class="display-4">Bienvenido</h1>
+        <h1 *ngIf="nombreUsuario" class="display-4">Bienvenido: {{nombreUsuario}}</h1>
+        <p class="lead">Esta es la intranet del laboratorio de pruebas de Master Builders.</p>
+        <hr class="my-4">
+        <p>Para acceder como un usuario normal(solo para leer datos) deberas registrarte en el formulario y luego iniciar sesión con tu nombre de usuario y tu contraseña.</p>
+        <p>Si quieres acceder como administrador para realizar cambios dentro del sistema, deberas contactarte con la administración.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Accede</a>
+        </p>
+      </div>-->
+</div>

@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 mx-auto mb-5">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <h2>Headers</h2>
+                <hr>
+                <div class="row">
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="name">Nombre:</label>
+                        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="description">Descripción:</label>
+                        <input type="text" class="form-control" id="description" name="description" [(ngModel)]="description" required>
+                    </div>
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="img">Img:</label>
+                        <input type="text" class="form-control" id="img" name="img" [(ngModel)]="img" required>
+                    </div>
+                </div>
+                <div class="row">                
+                    <div class="form-group col-md-4 col-xs-12">
+                        <label for="status">Estado</label>
+                        <select [(ngModel)]="status" name="status" id="status">
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-outline-success btn-block mt-5" [disabled]="!f.valid"><i class="bi bi-plus-circle mx-1"></i> Crear</button><br>
+                <button class="btn btn-outline-primary btn-block" [routerLink]="['/lista']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-square mx-1"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>
